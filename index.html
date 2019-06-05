@@ -69,16 +69,25 @@
             width: 200px;
         }
         
-        .content {
+        .content  {
             flex: 1;
             padding: 15px;
         }
+       
         
         .interests header {
             font-size: 1.25em;
         }
+        /* need margin and width in order hr to be the length it is */
         .hr {
             border-top:3px solid black;
+            padding:0px;
+            margin-left:0px;
+            width:220px;
+        }
+        #about {
+            padding-bottom:0px;
+            margin-bottom:5px;
         }
     </style>
 </head>
@@ -108,7 +117,7 @@
             </div>
             <div class="content">
                 <header>
-                    <h1> About me </h1>
+                    <h1 id="about"> About me </h1>
                     <hr class="hr"> 
                 </header>
                 <p>
