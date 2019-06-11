@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <title>
-           Alyssa's Amazing Website
-       </title> 
+        <title> Random </title>
         <style type="text/css">
             body {
                /* background: rgb(100, 198, 205); */
@@ -83,41 +81,31 @@
                 color: #454545;
             }
         </style>
-    </head>
-    <body>
-        <div id="all-contents">
-            <nav>
-                <header> Alyssa's Amazing Website! </header>
-                <ul>
-                    <li> 
-                        <a href="index.html"> Home </a>
-                    
-                    </li>
-                    <li>
-                        <a href="portfolio.html"> Portfolio </a>
-                        
-                    </li>
-                    <li> 
+        <body class= "background">
+            <div id= "all-contents">
+                <nav>
+                    <header> Alyssa's Amazing Website! </header>
+                    <ul>
+                  <li>
+                      <a href="index.html"> Home</a>
+                  </li>
+                  <li>
+                      <a href="portfolio.html"> Portfolio </a>
+                  </li>
+                  <li> 
                       <a href="gallery.html"> Gallery </a>
                   </li>
                   <li>
                      <a href="random.html"> Random </a>
                  </li>
-                </ul>
-            </nav>
-            <main>
-                <div class="content">
-                    <h1> Portfolio </h1 >
-                   <ul id="portfolio">
-                        
-                    </ul>
-                </div>
-                
-                
-            </main>
-        </div>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script id="portfolioScript">$(document).ready(function() {$.getJSON('projects/projects.json').then(function(data) { data.projects.forEach(function(project){ $('#portfolio').append('<li><a href="projects/' + project.name + '/">' + project.title + ' : ' + project.description + '</a></li>'); }); }); });</script>
-    </body>
+              </ul>
+                </nav>
+                <main>
+                    <div clas= "content">
+                        <h1> Random </h1>
+                    </div>
+                </main>
+            </div>
+        </body>
+    </head>
 </html>
