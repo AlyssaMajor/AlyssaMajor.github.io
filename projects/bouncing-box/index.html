@@ -16,13 +16,14 @@
 			width: 70px;
 			height: 70px;
 			/*	background-color: teal; */
-			background-image: url("../../img/soap.png");
+			background-image: url("../../img/soap.png"); 
 			font-size: 300%;
 			text-align: center;
 			display: block;
 			position: absolute;
 			top: 100px;
 			left: 0px;
+			border-radius: 50px;
 		}
 
 
@@ -65,7 +66,9 @@
 
 			box.css('left', position);
 			box.text(points);
-
+			
+			
+			
 			function update() {
 				// TODO 3 / 6 / 7 / 8
 				position += speed * direction;
@@ -85,27 +88,65 @@
 				positionY += speed * directionY;
 				if (positionY > boardHeight) {
 					directionY = -1;
+					
 				}
 				if (positionY < 0) {
-					directionY = 1
+					directionY = 1;
 					
 				}
 				box.css('top', positionY);
 
-			};
+			}
 
 
 
 			function handleBoxClick() {
 				// TODO 4 / 5
-				points += 1;
+			increasePoints();
+			
+			if (points % 5 === 0 ){
+				changeSpeed (-5);			}
+			else{
+				changeSpeed(3);
+			}
+			
+			randomlyPositionBox();
+		//	//	position = 0;
+			
+		//	//	randomlyPositionBox()
+			// randomlyChangeColor();
+			
+			
+			}
+			// function randomlyChangeColor(){
+			// var r = Math.random() * 255;
+			// var g = Math.random() * 255;
+			// var b = Math.random() * 255;
+	  //  	var rgb = "rgb(" + r  + g  + b + ")";
+	      
+			// box.css('background-color', rgb);	
+			// }
+		
+			function increasePoints(){
+					points += 1;
 				box.text(points);
-				position = 0;
-				speed += 3;
-			};
+			}
+			
+			function changeSpeed(speedChange){
+				speed += speedChange;
+			}
+			
+				// box starts at a random position each click
+			function randomlyPositionBox(){
+				var randNum = Math.random() * boardWidth;
+				console.log(randNum);
+				position = randNum;
+			}
+	
 
 			//this executes the update function code every 50 milliseconds
 			setInterval(update, 50);
+			
 			// this executes the handleBoxClick function code every time the box is clicked on
 			box.on('click', handleBoxClick);
 		})();
