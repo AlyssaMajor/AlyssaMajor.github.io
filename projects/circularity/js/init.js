@@ -32,12 +32,16 @@ var init = function (window) {
         }
 
         // TODO 3 : Call the drawCircle function 5 times //
-        for(var i = 0; i < 100; i++){
+        for(var i = 0; i < 5; i++){
          drawCircle();   
         }
     
         // TODO 7 : Create a Loop to call drawCircle 100 times
-
+       var numberOfCircles = 1000
+       
+        for(var i= 0; i < numberOfCircles; i++){
+            drawCircle();
+        }
     
         view.addChild(fps);
         app.addUpdateable(fps);
@@ -69,18 +73,22 @@ var init = function (window) {
     
         function update() {
             // TODO 4 : Update the circle's position //
-            
+            //its with todo 5.
             
             // TODO 5 : Call game.checkCirclePosition on your circles.
-            for(var i=0; i <100; i++ ){
+            for(var i=0; i <numberOfCircles; i++ ){
                 physikz.updatePosition(circles[i]);
-                game.checkCirclePosition(circles[i]);    
+               game.checkCirclePosition(circles[i]);    
             }
             
 
             // TODO 8 : Iterate over the array
            
-
+//var myArray = [];
+//for (var i=0; i<myArray.length; i++){
+// physikz.updatePosition(circle);
+// game.checkCirclePosition(circle);
+  //  var eachValue = myArray[i];
         }
         
         ////////////////////////////////////////////////////////////////////
