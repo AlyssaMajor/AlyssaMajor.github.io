@@ -50,23 +50,23 @@ var init = function (window) {
             // TODO 5 : YOUR CODE STARTS HERE //////////////////////
             
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width ) {
-                circle.x = -circle.radius;
+            if ( circle.x > canvas.width + circle.radius ) {
+                circle.x = 0 - circle.radius;
                 
                 
             } 
             // TODO 5a) if the circle has gone past of the LEFT side of the screen then place it on the RIGHT
-            else if ( circle.x < 0) {
-                circle.x = canvas.width;
+            else if ( circle.x < 0 + circle.radius) {
+                circle.x = canvas.width - circle.radius;
             } 
 
             // TODO 5b) if the circle has gone past of the TOP side of the screen then place it on the BOTTOM
-            if ( circle.y > canvas.height  ) {
-                circle.y = 0;
+            if ( circle.y > canvas.height + circle.radius ) {
+                circle.y = 0 - circle.radius;
             }
             // TODO 5c) if the circle has gone past of the BOTTOM side of the screen then place it OFF-SCREEN TOP
-            else if ( circle.y < 0 ) {
-                circle.y = canvas.height;
+            else if ( circle.y < 0 + circle.radius ) {
+                circle.y = canvas.height - circle.radius;
             }
             // YOUR TODO 5 CODE ENDS HERE //////////////////////////
         }
