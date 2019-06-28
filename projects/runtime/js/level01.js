@@ -16,20 +16,20 @@ var level01 = function (window) {
             number: 1, 
             speed: -3,
             gameItems: [
-                {type: 'laser',x:1200, y:280},
-                {type: 'laser',x:1900, y:280},
-                {type: 'laser',x:2400, y:280},
-                {type: 'lava',x:1500, y:430},
-                {type: 'lava',x:2500, y:430},
-                {type: 'lava',x:3500, y:430},
-                {type: 'lava',x:4500, y:430},
-                {type: 'saber',x:1600, y:300},
-                {type: 'saber',x:2700, y:300},
-                {type: 'saber',x:900, y:300},
-                {type: 'star' , x: 1500, y:250},
-                {type: 'star' , x: 600, y: 250},
-                {type: 'star' , x: 2400, y:250},
-                {type: 'star' , x: 3600, y:250}
+               {type: 'laser',x:1200, y:groundY -140},
+                {type: 'laser',x:1900, y:groundY -140},
+                {type: 'laser',x:2400, y:groundY -140},
+                {type: 'lava',x:1500, y:groundY -0},
+                {type: 'lava',x:2500, y:groundY -0},
+                {type: 'lava',x:3500, y:groundY -0},
+                {type: 'lava',x:4500, y:groundY -0},
+                {type: 'saber',x:1600, y:groundY -50},
+                {type: 'saber',x:2700, y:groundY -50},
+                {type: 'saber',x:900, y:groundY -50},
+                {type: 'star' , x: 1500, y:groundY -135},
+                {type: 'star' , x: 600, y: groundY -135},
+                {type: 'star' , x: 2400, y:groundY -135},
+                {type: 'star' , x: 3600, y:groundY -135}
             ]
         };
         window.levelData = levelData;
