@@ -23,13 +23,14 @@ var level01 = function (window) {
                 {type: 'lava',x:2500, y:groundY -0},
                 {type: 'lava',x:3500, y:groundY -0},
                 {type: 'lava',x:4500, y:groundY -0},
-                {type: 'saber',x:1600, y:groundY -50},
-                {type: 'saber',x:2700, y:groundY -50},
-                {type: 'saber',x:900, y:groundY -50},
+                {type: 'saber',x:1600, y:groundY -140},
+                {type: 'saber',x:2700, y:groundY -140},
+                {type: 'saber',x:900, y:groundY -140},
                 {type: 'star' , x: 1500, y:groundY -135},
                 {type: 'star' , x: 600, y: groundY -135},
                 {type: 'star' , x: 2400, y:groundY -135},
                 {type: 'star' , x: 3600, y:groundY -135}
+            
             ]
         };
         window.levelData = levelData;
